@@ -109,7 +109,11 @@ Edit `index.js`
 import { Link, graphql } from "gatsby";
 ```
 
+## Gatsby Styled Components
 
+```
+npm add gatsby-plugin-styled-components styled-components babel-plugin-styled-components --save
+```
 
 
 
