@@ -28,6 +28,17 @@
 
 [NodeJs Path](https://nodejs.org/api/path.html)
 
+[styled-components](https://www.npmjs.com/package/styled-components)
+
+[gatsby-plugin-styled-components](https://www.npmjs.com/package/gatsby-plugin-styled-components)
+
+[babel-plugin-styled-components](https://www.npmjs.com/package/babel-plugin-styled-components)
+
+[Netlify](https://www.netlify.com/)
+
+
+
+
 ## Start a Gatsby Project
 
 ```
