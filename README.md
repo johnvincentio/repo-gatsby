@@ -18,6 +18,16 @@
 
 [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/)
 
+[Create Pages](https://www.gatsbyjs.org/docs/node-apis/#createPages)
+
+[Create Page](https://www.gatsbyjs.org/docs/node-apis/#createPage)
+
+[Tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates)
+
+[dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml)
+
+[NodeJs Path](https://nodejs.org/api/path.html)
+
 ## Start a Gatsby Project
 
 ```
