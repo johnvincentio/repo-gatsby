@@ -115,6 +115,28 @@ import { Link, graphql } from "gatsby";
 npm add gatsby-plugin-styled-components styled-components babel-plugin-styled-components --save
 ```
 
+## Netlify
+
+```
+git remote add origin git@github.com:johnvincentio/new-gatsby-blog.git
+git push origin master
+```
+
+Create github repo `new-gatsby-blog`
+
+```
+git@github.com:johnvincentio/new-gatsby-blog.git
+```
+
+* New Site from Git
+	* Github
+
+Only Selected repositories
+
+* new-gatsby-blog
+* install
+
+
 
 
 
