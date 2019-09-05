@@ -136,6 +136,14 @@ Only Selected repositories
 * new-gatsby-blog
 * install
 
+If deploy fails, try clear cache and try again.
+
+Browser
+
+```
+https://sad-stallman-ba9e64.netlify.com/
+```
+
 
 
 
