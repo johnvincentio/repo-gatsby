@@ -21,7 +21,7 @@ export default ({data}) => (
     <SEO title="Home" />
 		<div>
 			<h1>Something else</h1>
-			<h4>{data.allMarkdownRemark.totalCount}</h4>
+			<h4>Pages {data.allMarkdownRemark.totalCount}</h4>
 			{
 				data.allMarkdownRemark.edges.map(({node}) => (
 					<div key={node.id}>
@@ -34,6 +34,9 @@ export default ({data}) => (
 					</div>
 				))
 			}
+		</div>
+		<div>
+		<Link to="/page-2">Go to Page 2</Link>
 		</div>
 
   </Layout>
