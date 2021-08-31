@@ -7,7 +7,7 @@ echo "create inventory"
 INPUT_FILE="products_export_1.csv"
 OUTPUT_FILE="inventory_export_1.csv"
 
-echo "Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Warehouse" > $OUTPUT_FILE
+echo "Handle,Title,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,SKU,Warehouse" > $OUTPUT_FILE
 #
 # cat $INPUT_FILE | sed 's/,\("[^"]*"\)*/:::::\1/g' | awk -F":::::" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'} | awk 'NR!=1 {print} '>> $OUTPUT_FILE
 
@@ -38,10 +38,13 @@ echo "Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 V
 
 # ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE 
 
-ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
-	awk 'NR!=1 {print}' | awk -F"|" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14"," "\"25\""'}  >> $OUTPUT_FILE
-
-
-
 # ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
 #	awk 'NR!=1 {print}' | awk -F"|" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'}  >> $OUTPUT_FILE
+
+# ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE 
+
+# ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
+# awk 'NR!=1 {print}'
+
+ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
+	awk 'NR!=1 {print}' | awk -F"|" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14"," "\"25\""'}  >> $OUTPUT_FILE

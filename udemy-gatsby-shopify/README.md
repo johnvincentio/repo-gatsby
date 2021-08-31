@@ -49,14 +49,15 @@ Back to Shopify
 
 May take some time.
 
-Check inventory, ensure Quantity >= 1
-
 ## Inventory
 
 [Exporting or importing inventory with a CSV file](https://help.shopify.com/en/manual/products/inventory/inventory-csv)
 
 * Products, Inventory
 * Import
+* `inventory_export_1.csv`
+
+Check inventory, ensure Quantity >= 1
 
 ## New Project
 
@@ -98,3 +99,19 @@ http://localhost:8000/___graphql
 
 
 # END
+
+```
+awk -F, '{
+  for (i=1; i<=NF; i++) {
+    if (s) {
+      if ($i ~ "\"$") {print s","$i; s=""}
+      else s = s","$i
+    }
+    else {
+      if ($i ~ "^\".*\"$") print $i
+      else if ($i ~ "^\"") s = $i
+      else print $i
+    }
+  }
+}' a.csv
+```
