@@ -57,17 +57,6 @@ May take some time.
 * Import
 * `inventory_export_1.csv`
 
-Check inventory, ensure Quantity >= 1
-
-```
-Line 2: This variant couldn't be stocked at Warehouse because its inventory is managed by Oberlo.
-```
-
-
-
-
-
-
 ## New Project
 
 ```
@@ -100,7 +89,7 @@ View GraphQL
 http://localhost:8000/___graphql
 ```
 
-## General
+
 
 
 
@@ -108,25 +97,4 @@ http://localhost:8000/___graphql
 
 
 # END
-
-```
-awk -F, '{
-  for (i=1; i<=NF; i++) {
-    if (s) {
-      if ($i ~ "\"$") {print s","$i; s=""}
-      else s = s","$i
-    }
-    else {
-      if ($i ~ "^\".*\"$") print $i
-      else if ($i ~ "^\"") s = $i
-      else print $i
-    }
-  }
-}' a.csv
-```
-
-```
-Handle,Title,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,SKU,Oberlo
-wool-tweed-newsboy-cap-for-men,Wool Tweed Newsboy Cap for Men,Hat Size,62-63 cm,,,,,36538009-blue-62-63-cm,25
-```
 
