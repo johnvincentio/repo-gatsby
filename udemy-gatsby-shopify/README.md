@@ -59,6 +59,15 @@ May take some time.
 
 Check inventory, ensure Quantity >= 1
 
+```
+Line 2: This variant couldn't be stocked at Warehouse because its inventory is managed by Oberlo.
+```
+
+
+
+
+
+
 ## New Project
 
 ```
@@ -115,3 +124,9 @@ awk -F, '{
   }
 }' a.csv
 ```
+
+```
+Handle,Title,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,SKU,Oberlo
+wool-tweed-newsboy-cap-for-men,Wool Tweed Newsboy Cap for Men,Hat Size,62-63 cm,,,,,36538009-blue-62-63-cm,25
+```
+
