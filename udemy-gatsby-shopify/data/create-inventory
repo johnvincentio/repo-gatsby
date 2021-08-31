@@ -9,7 +9,39 @@ OUTPUT_FILE="inventory_export_1.csv"
 
 echo "Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Warehouse" > $OUTPUT_FILE
 #
-cat $INPUT_FILE | awk -F, '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'} | awk 'NR!=1 {print} '>> $OUTPUT_FILE
+# cat $INPUT_FILE | sed 's/,\("[^"]*"\)*/:::::\1/g' | awk -F":::::" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'} | awk 'NR!=1 {print} '>> $OUTPUT_FILE
+
+# perl -MText::ParseWords -nle'
+#   print ++$c, ". ", $_ 
+#    for parse_line(",", 1, $_);
+#  ' $INPUT_FILE
+
+# cat $INPUT_FILE | perl -F',(?![[:alpha:]])' -anle 'print "$F[0] $F[3]"'
+
+# echo '"prabhat,kumar",19,2000,"bangalore,India"' |
+#  perl -F',(?![[:alpha:]])' -anle 'print "$F[0], $F[3]"'
+
+# cat a.csv | perl -F',(?![[:alpha:]])' -anle 'print "$F[0], $F[5], $F[6]"'
+
+# echo 'aaa,"hell world, test text",bbb,ccc," test text"' | sed 's/,\("[^"]*"\)*/\n\1/g'
+
+# echo 'aaa,"hell world, test text",bbb,ccc," test text"' | sed 's/,\("[^"]*"\)*/*****\1/g'
 
 
-cat $OUTPUT_FILE
+# cat $OUTPUT_FILE
+
+# cat a.csv | sed 's/,\("[^"]*"\)*/:::::\1/g' | awk -F":::::" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'} | awk 'NR!=1 {print}'
+
+# cat a.csv | sed 's/,\("[^"]*"\)*/:::::\1/g'
+
+# ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|",:force_quotes=>true)' a.csv
+
+# ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE 
+
+ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
+	awk 'NR!=1 {print}' | awk -F"|" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14"," "\"25\""'}  >> $OUTPUT_FILE
+
+
+
+# ruby -rcsv -ne 'puts CSV.generate_line(CSV.parse_line($_), :col_sep=>"|", :force_quotes=>true, :headers=>false)' $INPUT_FILE |
+#	awk 'NR!=1 {print}' | awk -F"|" '{print $1"," $2"," $8"," $9"," $10"," $11"," $12"," $13"," $14",25"'}  >> $OUTPUT_FILE
