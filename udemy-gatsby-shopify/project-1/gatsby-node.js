@@ -11,14 +11,16 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async({ graphql, actions }) => {
 	const { createPage } = actions;
 	const { data } = await graphql(`
+	{
 	  allShopifyProduct {
-    edges {
-      node {
-        id
-        handle
-      }
-    }
-  }
+			edges {
+				node {
+					shopifyId
+					handle
+				}
+			}
+		}
+	}
 	`);
 	data.allShopifyProduct.edges.forEach(({ node }) => {
 		createPage({

@@ -212,6 +212,9 @@ query MyQuery {
 }
 ```
 
+```
+localhost:8000/products/mens-fedora
+```
 
 # END
 
