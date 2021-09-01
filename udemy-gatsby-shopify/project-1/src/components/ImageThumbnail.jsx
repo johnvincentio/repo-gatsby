@@ -8,13 +8,16 @@ import { ImageThumbnailWrapper } from './styles';
 
 function ImageThumbnail({ isActive, onClick, image }) {
 	console.log('--- ImageThumbnail');
+	const handleClick = () => {
+		console.log('handleClick');
+		onClick(image);
+	};
 	return (
 		<ImageThumbnailWrapper
-			onClick={() => {
-				console.log('onClick');
-			}}
+			onClick={() => { handleClick(); }}
+			isActive={isActive}
 		>
-			<Image fluid={image} />
+			<Image fluid={image.localFile.childImageSharp.fluid} />
 		</ImageThumbnailWrapper>
 	);
 }

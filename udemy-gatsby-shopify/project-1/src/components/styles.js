@@ -11,7 +11,7 @@ const LayoutWrapper = styled.div`
 
 const ImageThumbnailWrapper = styled.section`
 	cursor: pointer;
-	border 4px solid #ecc;
+	border 4px solid ${(props) => (props.isActive ? ' blue' : '#eee ')};
 `;
 
 const ImageGalleryWrapper = styled.section`
