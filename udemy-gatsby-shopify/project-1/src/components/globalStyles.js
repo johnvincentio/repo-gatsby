@@ -1,7 +1,9 @@
-import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
+//
 
-export const GlobalStyle = createGlobalStyle`
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+
+const GlobalStyle = createGlobalStyle`
   ${reset}
   select{
     height: 40px;
@@ -41,4 +43,6 @@ export const GlobalStyle = createGlobalStyle`
       list-style: disc;
     }
   }
-`
+`;
+
+export default GlobalStyle;
