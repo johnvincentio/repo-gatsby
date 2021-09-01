@@ -1,11 +1,10 @@
-
 import React from 'react';
 
 import Image from 'gatsby-image';
 
 import { ImageGalleryWrapper } from './styles';
 
-export function ImageGallery({ images }) {
+function ImageGallery({ images }) {
 	return (
 		<ImageGalleryWrapper>
 			<div>
@@ -13,5 +12,6 @@ export function ImageGallery({ images }) {
 			</div>
 		</ImageGalleryWrapper>
 	);
-};
+}
 
+export default ImageGallery;
