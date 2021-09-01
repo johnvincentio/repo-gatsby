@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutWrapper } from './styles';
+import LayoutWrapper from './styles';
 
 const Layout = ({ children }) => (
 	<>
@@ -9,4 +9,4 @@ const Layout = ({ children }) => (
 	</>
 );
 
-export { Layout };
+export default Layout;

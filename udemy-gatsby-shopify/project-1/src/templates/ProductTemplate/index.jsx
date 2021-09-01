@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { Layout, ImageGallery } from 'components';
+import { Layout, ImageGallery } from '../../components';
 import { Grid } from './styles';
 
 export const query = graphql`
@@ -12,6 +11,7 @@ export const query = graphql`
 			title
 			description
 			images {
+				id
 				localFile {
 					childImageSharp {
 						fluid(maxWidth: 300) {
@@ -36,7 +36,7 @@ export default function ProductTemplate(props) {
 				<div>
 					<ImageGallery images={props.data.shopifyProduct.images} />
 				</div>
-			</Grid>	
+			</Grid>
 		</Layout>
 	);
 }

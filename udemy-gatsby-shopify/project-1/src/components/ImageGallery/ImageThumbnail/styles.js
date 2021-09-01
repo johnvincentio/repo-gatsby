@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-const ImageGalleryWrapper = styled.section`
-	> div:first-child {
-		border 5px solid #ccc;
-	}
+const ImageThumbnailWrapper = styled.section`
+	cursor: pointer;
+	border 4px solid #ecc;
 `;
 
-export default ImageGalleryWrapper;
+export default ImageThumbnailWrapper;

@@ -1,14 +1,14 @@
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
-  });
+	actions.setWebpackConfig({
+		resolve: {
+			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+		},
+	});
 };
 
-exports.createPages = async({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const { data } = await graphql(`
 	{
@@ -26,9 +26,9 @@ exports.createPages = async({ graphql, actions }) => {
 		createPage({
 			path: `products/${node.handle}`,
 			context: {
-				shopifyId: node.shopifyId
+				shopifyId: node.shopifyId,
 			},
-			component: path.resolve('./src/templates/ProductTemplate/index.js')
+			component: path.resolve('./src/templates/ProductTemplate/index.jsx'),
 		});
 	});
 };

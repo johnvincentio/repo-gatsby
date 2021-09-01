@@ -1,7 +1,6 @@
+import styled from 'styled-components';
 
-import styled from "styled-components";
-
-export const Grid = styled.section`
+const Grid = styled.section`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 20px;
@@ -17,3 +16,5 @@ export const Grid = styled.section`
 		}
 	}
 `;
+
+export default { Grid };
