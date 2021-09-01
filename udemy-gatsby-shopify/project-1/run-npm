@@ -1,0 +1,32 @@
+#!/bin/sh 
+#
+
+set -x
+
+#
+# React
+#
+
+npm i prop-types@15.7.2 --save
+
+
+#
+#
+#
+
+npm i classnames --save
+
+npm i @babel/runtime --save
+
+npm i eslint --save-dev
+
+npm i @babel/core babel-eslint babel-jest babel-loader --save-dev
+
+npm i @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread @babel/plugin-syntax-dynamic-import \
+@babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript --save-dev
+
+npm i eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --save-dev
+
+npm i eslint-config-airbnb eslint-config-prettier eslint-webpack-plugin --save-dev
+
+set +x
