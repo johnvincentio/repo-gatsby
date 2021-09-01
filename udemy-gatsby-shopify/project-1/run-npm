@@ -31,6 +31,8 @@ npm i eslint-config-airbnb eslint-config-prettier eslint-webpack-plugin --save-d
 
 set +x
 
+npm i dotenv --save
+
 		"@babel/core": "^7.12.10",
 		"@babel/plugin-proposal-class-properties": "^7.12.1",
 		"@babel/plugin-proposal-object-rest-spread": "^7.12.1",

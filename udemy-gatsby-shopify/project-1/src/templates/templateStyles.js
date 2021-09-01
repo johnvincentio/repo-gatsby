@@ -1,6 +1,8 @@
+/* eslint-disable import/prefer-default-export */
+
 import styled from 'styled-components';
 
-const Grid = styled.section`
+export const Grid = styled.section`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 20px;
@@ -16,5 +18,3 @@ const Grid = styled.section`
 		}
 	}
 `;
-
-export default { Grid };

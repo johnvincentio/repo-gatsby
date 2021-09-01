@@ -1,9 +1,9 @@
-//
+/* eslint-disable import/prefer-default-export */
 
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${reset}
   select{
     height: 40px;
@@ -44,5 +44,3 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `;
-
-export default GlobalStyle;

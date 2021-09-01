@@ -4,7 +4,7 @@ import React from 'react';
 
 import Image from 'gatsby-image';
 
-import ImageThumbnailWrapper from './styles';
+import { ImageThumbnailWrapper } from './styles';
 
 function ImageThumbnail({ isActive, onClick, image }) {
 	console.log('--- ImageThumbnail');

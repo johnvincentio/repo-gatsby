@@ -2,8 +2,9 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { Layout, ImageGallery } from '../../components';
-import { Grid } from './styles';
+import { Layout, ImageGallery } from '../components';
+
+import { Grid } from './templateStyles';
 
 export const query = graphql`
 	query ProductQuery($shopifyId: String) {
