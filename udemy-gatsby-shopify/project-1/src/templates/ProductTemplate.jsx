@@ -31,12 +31,28 @@ export default function ProductTemplate(props) {
 	console.log(props);
 	console.log('CartContext ', CartContext);
 	const { getProductById } = React.useContext(CartContext);
+
+	// React.useEffect(() => {
+	// 	getProductById(props.data.shopifyProduct.storefrontId).then((result) => {
+	// 		setProduct(result);
+	// 		setSelectedVariant(
+	// 			result.variants.find(({ id }) => id === variantID) || result.variants[0],
+	// 		);
+	// 	});
+	// }, [
+	// 	getProductById,
+	// 	setProduct,
+	// 	props.data.shopifyProduct.shopifyId,
+	// 	variantID,
+	// ]);
+
 	React.useEffect(() => {
 		console.log('in useEffect');
 		getProductById(props.data.shopifyProduct.shopifyId).then((result) => {
 			console.log('result ', result);
 		});
 	}, [getProductById, props.data.shopifyProduct.shopifyId]);
+
 	return (
 		<Layout>
 			<Grid>
