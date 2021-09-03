@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import CartContext from '../context/CartContext';
+import CartContext from 'context/CartContext';
 import { Layout, ImageGallery } from '../components';
 
 import { Grid } from './templateStyles';
@@ -46,12 +46,12 @@ export default function ProductTemplate(props) {
 	// 	variantID,
 	// ]);
 
-	React.useEffect(() => {
-		console.log('in useEffect');
-		getProductById(props.data.shopifyProduct.shopifyId).then((result) => {
-			console.log('result ', result);
-		});
-	}, [getProductById, props.data.shopifyProduct.shopifyId]);
+	// React.useEffect(() => {
+	// 	console.log('in useEffect');
+	// 	getProductById(props.data.shopifyProduct.shopifyId).then((result) => {
+	// 		console.log('result ', result);
+	// 	});
+	// 	}, [getProductById, props.data.shopifyProduct.shopifyId]);
 
 	return (
 		<Layout>
