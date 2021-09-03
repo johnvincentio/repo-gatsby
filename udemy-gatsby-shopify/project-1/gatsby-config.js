@@ -8,7 +8,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'Gatsby Shopify Starter',
 		description: 'Gatsby & Shopify Starter',
-		author: '@johnvincentio',
+		author: '@tomphill',
 	},
 	plugins: [
 		'gatsby-plugin-styled-components',
