@@ -119,6 +119,12 @@ and Save
 
 Note the Storefront access token.
 
+## Manage Apps
+
+```
+https://johnvincentio.myshopify.com/admin/apps/private
+```
+
 ## New Project
 
 ```

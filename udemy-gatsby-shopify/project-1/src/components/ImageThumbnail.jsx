@@ -13,10 +13,7 @@ function ImageThumbnail({ isActive, onClick, image }) {
 		onClick(image);
 	};
 	return (
-		<ImageThumbnailWrapper
-			onClick={() => { handleClick(); }}
-			isActive={isActive}
-		>
+		<ImageThumbnailWrapper onClick={handleClick} isActive={isActive}>
 			<Image fluid={image.localFile.childImageSharp.fluid} />
 		</ImageThumbnailWrapper>
 	);

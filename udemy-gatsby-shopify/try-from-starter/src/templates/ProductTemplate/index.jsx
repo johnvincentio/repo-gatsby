@@ -3,9 +3,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import CartContext from 'context/CartContext';
-import { Layout, ImageGallery } from '../components';
+import { Layout, ImageGallery } from 'components';
 
-import { Grid } from './templateStyles';
+import { Grid } from './styles';
 
 export const query = graphql`
 	query ProductQuery($shopifyId: String) {
