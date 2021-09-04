@@ -1,5 +1,7 @@
 //
 
+/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import { ProductContextProvider } from './src/context/ProductContext';
 import { CartContextProvider } from './src/context/CartContext';
