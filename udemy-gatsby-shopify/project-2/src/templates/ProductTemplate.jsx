@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React from 'react';
 
 import { graphql } from 'gatsby';
@@ -42,7 +44,8 @@ export default function ProductTemplate(props) {
 			setProduct(result);
 			setSelectedVariant(result.variants[0]);
 		});
-	}, [getProductById, setProduct, props.data.shopifyProduct.shopifyId]);
+	// }, [getProductById, setProduct, props.data.shopifyProduct.shopifyId]);
+	}, [getProductById, setProduct]);
 
 	const handleVariantChange = (e) => {
 		const newVariant = product?.variants.find((v) => v.id === e.target.value);

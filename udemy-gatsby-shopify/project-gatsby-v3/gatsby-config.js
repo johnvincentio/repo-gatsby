@@ -29,9 +29,12 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-shopify',
 			options: {
-				shopName: process.env.GATSBY_SHOP_NAME,
-				accessToken: process.env.GATSBY_ACCESS_TOKEN,
-				apiVersion: '2021-07',
+        password: process.env.SHOPIFY_SHOP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+				shopifyConnections: ["collections"],
+				// shopName: process.env.GATSBY_SHOP_NAME,
+				// accessToken: process.env.GATSBY_ACCESS_TOKEN,
+				// apiVersion: '2021-07',
 			},
 		},
 		'gatsby-plugin-react-helmet',
@@ -42,8 +45,11 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
-		'gatsby-transformer-sharp',
+		"gatsby-plugin-image",
 		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+
+
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

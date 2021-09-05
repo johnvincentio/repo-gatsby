@@ -225,8 +225,47 @@ Upgrade Gatsby to V3
 https://www.npmjs.com/package/gatsby
 https://www.npmjs.com/package/gatsby-source-shopify
 https://www.npmjs.com/package/shopify-buy
+```
 
 ```
+    "babel-plugin-styled-components": "^1.12.0",
+    "classnames": "^2.3.1",
+    "disqus-react": "^1.0.11",
+    "gatsby": "^3.6.0",
+    "gatsby-plugin-catch-links": "^3.6.0",
+    "gatsby-plugin-feed": "^3.6.0",
+    "gatsby-plugin-google-analytics": "^3.6.0",
+    "gatsby-plugin-image": "^1.6.0",
+    "gatsby-plugin-manifest": "^3.6.0",
+    "gatsby-plugin-offline": "^4.6.0",
+    "gatsby-plugin-react-helmet": "^4.6.0",
+    "gatsby-plugin-robots-txt": "^1.6.2",
+    "gatsby-plugin-sass": "^4.6.0",
+    "gatsby-plugin-sharp": "^3.6.0",
+    "gatsby-plugin-sitemap": "^3.3.0",
+    "gatsby-plugin-styled-components": "^4.6.0",
+    "gatsby-source-filesystem": "^3.6.0",
+    "gatsby-transformer-json": "^3.6.0",
+    "gatsby-transformer-remark": "^4.3.0",
+    "gatsby-transformer-sharp": "^3.6.0",
+    "gatsby-transformer-yaml": "^3.6.0",
+    "google-map-react": "^2.1.9",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "react-leaf-carousel": "^2.0.3",
+    "sass": "^1.32.12",
+    "styled-components": "^5.3.0"
+```
+
+```
+    "gatsby-background-image": "^1.1.1",
+    "gatsby-image": "^2.4.9",
+```
+
+
 
 ## AirBnB Eslint
 
@@ -260,7 +299,32 @@ npx install-peerdeps --dev eslint-config-airbnb
 fails
 ```
 
+## Error
 
+```
+success Waiting for bulk operation to complete - 0.002s
+
+ ERROR #gatsby-source-shopify_111000 
+
+Your credentials don't have access to a resource you requested
+
+
+
+  Error: Operation gid://shopify/BulkOperation/437030846646 failed with ACCESS_DENIED
+```
+
+### Solution
+
+It is a permissions problem
+
+* `https://johnvincentio.myshopify.com/`
+* Apps
+* Section: `ADMIN API PERMISSIONS`
+* Show inactive Admin API permissions
+
+Add
+
+Products, Read and Write
 
 
 # END
