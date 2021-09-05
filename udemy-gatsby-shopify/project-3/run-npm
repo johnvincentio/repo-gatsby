@@ -1,0 +1,94 @@
+#!/bin/sh 
+#
+
+set -x
+
+#
+# React
+#
+
+npm i prop-types@15.7.2 --save
+
+
+#
+#
+#
+
+npm i classnames --save
+
+npm i @babel/runtime --save
+
+npm i eslint --save-dev
+
+npm i @babel/core babel-eslint babel-jest babel-loader --save-dev
+
+npm i @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread @babel/plugin-syntax-dynamic-import \
+@babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript --save-dev
+
+npm i eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --save-dev
+
+npm i eslint-config-airbnb eslint-config-prettier eslint-webpack-plugin --save-dev
+
+set +x
+
+npm i dotenv --save
+
+  "dependencies": {
+    "@babel/runtime": "^7.15.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "classnames": "^2.3.1",
+    "dotenv": "^8.6.0",
+    "gatsby": "^2.23.12",
+    "gatsby-background-image": "^1.1.1",
+    "gatsby-image": "^2.4.9",
+    "gatsby-optional-chaining": "^1.0.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-offline": "^3.2.13",
+    "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-plugin-styled-components": "^3.3.9",
+    "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-shopify": "^3.8.0",
+    "gatsby-transformer-sharp": "^2.5.7",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.10.0",
+    "shopify-buy": "^2.11.0",
+    "styled-components": "^5.1.1",
+    "styled-reset": "^4.2.0"
+  },
+
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-webpack-plugin": "^2.4.1",
+    "rimraf": "^3.0.2"
+  },
+
+warn ESLintError: 
+/Users/jv/Desktop/MyDevelopment/github/repo-gatsby/udemy-gatsby-shopify/project-2/src/templates/ProductTemplate.jsx
+  48:5  warning  React Hook React.useEffect has a missing dependency: 'props.data.shopifyProduct.shopifyId'. Either
+include it or remove the dependency array          react-hooks/exhaustive-deps
+  66:9  warning  onBlur must be used instead of onchange, unless absolutely necessary and it causes no negative
+consequences for keyboard only or screen reader users  jsx-a11y/no-onchange
+
