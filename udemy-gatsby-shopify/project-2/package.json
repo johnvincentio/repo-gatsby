@@ -29,9 +29,6 @@
     "styled-components": "^5.1.1",
     "styled-reset": "^4.2.0"
   },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
   "keywords": [
     "gatsby"
   ],
@@ -51,5 +48,8 @@
   },
   "bugs": {
     "url": "https://github.com/tomphill/gatsby-shopify-starter/issues"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
   }
 }
