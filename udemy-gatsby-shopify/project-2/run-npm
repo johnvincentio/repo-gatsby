@@ -61,7 +61,7 @@ npm i dotenv --save
     "styled-components": "^5.1.1",
     "styled-reset": "^4.2.0"
   },
-	
+
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -84,3 +84,11 @@ npm i dotenv --save
     "eslint-webpack-plugin": "^2.4.1",
     "rimraf": "^3.0.2"
   },
+
+warn ESLintError: 
+/Users/jv/Desktop/MyDevelopment/github/repo-gatsby/udemy-gatsby-shopify/project-2/src/templates/ProductTemplate.jsx
+  48:5  warning  React Hook React.useEffect has a missing dependency: 'props.data.shopifyProduct.shopifyId'. Either
+include it or remove the dependency array          react-hooks/exhaustive-deps
+  66:9  warning  onBlur must be used instead of onchange, unless absolutely necessary and it causes no negative
+consequences for keyboard only or screen reader users  jsx-a11y/no-onchange
+

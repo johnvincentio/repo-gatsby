@@ -37,7 +37,6 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "cleanJV": "rimraf .cache public",
     "develop": "gatsby develop",
     "start": "npm run clean && npm run develop",
     "build": "gatsby build",

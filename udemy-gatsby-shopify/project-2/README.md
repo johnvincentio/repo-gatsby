@@ -216,5 +216,52 @@ query MyQuery {
 localhost:8000/products/mens-fedora
 ```
 
+
+## Futures
+
+Upgrade Gatsby to V3
+
+```
+https://www.npmjs.com/package/gatsby
+https://www.npmjs.com/package/gatsby-source-shopify
+https://www.npmjs.com/package/shopify-buy
+
+```
+
+## AirBnB Eslint
+
+```
+  eslint: '^5.16.0 || ^6.8.0 || ^7.2.0',
+  'eslint-plugin-import': '^2.22.1',
+  'eslint-plugin-jsx-a11y': '^6.4.1',
+  'eslint-plugin-react': '^7.21.5',
+  'eslint-plugin-react-hooks': '^4 || ^3 || ^2.3.0 || ^1.7.0'
+```
+
+```
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+```
+
+
+```
+npm install --save-dev gatsby-plugin-eslint eslint eslint-webpack-plugin
+```
+
+
+```
+npx install-peerdeps --dev eslint-config-airbnb
+
+fails
+```
+
+
+
+
 # END
 
