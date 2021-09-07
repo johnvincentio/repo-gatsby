@@ -8,11 +8,18 @@ import ImageThumbnail from './ImageThumbnail';
 
 import { ImageGalleryWrapper } from './styles';
 
-function ImageGallery({ images }) {
-	const [activeImageThumbnail, setActiveImageThumbnail] = React.useState(images[0]);
+function ImageGallery({ selectedVariantImageId, images }) {
+	const [activeImageThumbnail, setActiveImageThumbnail] = React.useState(
+    images.find(({ id }) => id === selectedVariantImageId) || images[0]
+  );
 
+	React.useEffect(() => {
+    setActiveImageThumbnail(
+      images.find(({ id }) => id === selectedVariantImageId) || images[0]
+    );
+  }, [selectedVariantImageId, images, setActiveImageThumbnail]);
+	
 	const handleClick = (image) => {
-		console.log('ImageGallery::handleClick');
 		setActiveImageThumbnail(image);
 	};
 	console.log('ImageGallery; images ', images);
@@ -30,8 +37,8 @@ function ImageGallery({ images }) {
 						<ImageThumbnail
 							key={image.id}
 							isActive={activeImageThumbnail.id === image.id}
-							image={image}
 							onClick={handleClick}
+							image={image}
 						/>
 					);
 				})}
