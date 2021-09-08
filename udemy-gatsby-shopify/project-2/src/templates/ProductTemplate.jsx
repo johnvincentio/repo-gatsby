@@ -70,6 +70,7 @@ export default function ProductTemplate(props) {
 					<p>{props.data.shopifyProduct.description}</p>
 					{product?.availableForSale && !!selectedVariant && (
 						<>
+						{product?.variants.length > 1 && (
 							<SelectWrapper>
 								<strong>Variant</strong>
 								<select
@@ -81,6 +82,7 @@ export default function ProductTemplate(props) {
 									))}
 								</select>
 							</SelectWrapper>
+						)}
 							{!!selectedVariant && (
 								<Price>${selectedVariant?.price}</Price>
 							)}
@@ -97,17 +99,3 @@ export default function ProductTemplate(props) {
 		</Layout>
 	);
 }
-
-// React.useEffect(() => {
-// 	getProductById(props.data.shopifyProduct.storefrontId).then((result) => {
-// 		setProduct(result);
-// 		setSelectedVariant(
-// 			result.variants.find(({ id }) => id === variantID) || result.variants[0],
-// 		);
-// 	});
-// }, [
-// 	getProductById,
-// 	setProduct,
-// 	props.data.shopifyProduct.shopifyId,
-// 	variantID,
-// ]);
