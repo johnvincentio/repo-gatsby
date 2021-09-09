@@ -92,6 +92,10 @@ Any three numbers can be used as the "Card Security Code" and any expiry date in
 * Product tag, is equal to, `Summer`
 * Save
 
+I believe the Application requires the Shopify plugin to get an image for each collection.
+
+
+
 ## API Keys
 
 * Apps, Manage Private Apps
@@ -216,6 +220,36 @@ query MyQuery {
 localhost:8000/products/mens-fedora
 ```
 
+## Error
+
+```
+Cannot query field "image" on type "ShopifyCollection".
+
+If you don't expect "image" to exist on the type "ShopifyCollection" it is most likely a typo.
+However, if you expect "image" to exist there are a couple of solutions to common problems:
+```
+
+### Solution
+
+Upgrade to `gatsby-source-shopify@3.8.0`
+
+## Error
+
+```
+Cannot query field "image" on type "ShopifyCollection".
+
+If you don't expect "image" to exist on the type "ShopifyCollection" it is most likely a typo.
+However, if you expect "image" to exist there are a couple of solutions to common problems:
+```
+
+### Solution
+
+Add image to all Collections.
+
+From Shopify dashboard
+
+* Products, Collections
+* Select: `Summer Hats`
 
 ## Futures
 
