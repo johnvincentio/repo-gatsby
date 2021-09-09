@@ -10,15 +10,16 @@ The differences to the API are considerable, will take some time to make the cha
 
 `gatsby-starter-shopify` - See Gatsby
 
-[Gatsby Shopify at github](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-shopify)
 
+# Gatsby Shopify
 
+* [Gatsby at github](https://github.com/gatsbyjs/gatsby)
+* [Gatsby](https://www.gatsbyjs.com/)
+* [Gatsby Plugins](https://www.gatsbyjs.com/plugins)
+* [Gatsby Shopify at github](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-shopify)
 
-[Gatsby at github](https://github.com/gatsbyjs/gatsby)
+* [Gatsby Shopify Demo](https://shopify-demo.gatsbyjs.com/)
 
-[Gatsby](https://www.gatsbyjs.com/)
-
-[Gatsby Plugins](https://www.gatsbyjs.com/plugins)
 
 
 
