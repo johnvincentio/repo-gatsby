@@ -21,8 +21,20 @@ The differences to the API are considerable, will take some time to make the cha
 * [Gatsby Shopify Demo](https://shopify-demo.gatsbyjs.com/)
 
 
+## Gatsby Shopify Starter
+
+[Gatsby Shopify Starter](https://github.com/gatsbyjs/gatsby-starter-shopify)
+
+[Workspace](/Users/jv/Desktop/MyDevelopment/github/repo-gatsby/gatsby-shopify/gatsby-starter-shopify)
 
 
+
+
+## Ideas
+
+Can I use the stamps images etc to build a Shopify inventory?
+
+Build the Udemy course code on top of this Starter project.
 
 # END
 
